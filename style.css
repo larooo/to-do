@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+#container {
+  background: linear-gradient(110deg, #fdcd3b 25%, #ffed4b 25%);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 100%;
+  grid-gap: 2px;
+  opacity: 0.8;
+}
+#form {
+  grid-area: 1 / 3 / 6 / 7;
+
+  padding: 1.2em;
+  background: url("to-do-list1.jpg");
+  background-size: 650px 550px;
+  background-repeat: no-repeat;
+}
+input {
+  grid-row-start: 2;
+  width: 65%;
+  border-radius: 5%;
+  height: 50px;
+  font-size: 14pt;
+  font-family: "Courgette", cursive;
+  margin-top: 2em;
+  margin-left: 2.5em;
+}
+p {
+  font-size: 3em;
+  margin-left: 2em;
+  transform: rotate(20deg);
+  grid-area: 1 / 1 / 2 / 2;
+  margin-bottom: 2em;
+  font-family: "Sedgwick Ave Display", cursive;
+  width: 50px;
+  height: 50px;
+}
+
+button {
+  margin: 1em;
+  background-color: transparent;
+  padding: 1em;
+  border-radius: 20%;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 16pt;
+}
+#add {
+  grid-area: 6 / 3 / 7/ 4;
+}
+#done {
+  grid-area: 6 / 5 / 7 / 6;
+}
+ol {
+  padding-top: 0;
+}
+
+li {
+  font-size: 14pt;
+  font-family: "Courgette", cursive;
+  font-style: italic;
+  line-height: 2.55em;
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: 4em;
+}
+.alert-primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+@media screen and (max-width: 510px) {
+  button {
+    width: 100%;
+  }
+  p {
+    font-size: 2em;
+    margin-left: 1em;
+  }
+  #form {
+    grid-area: 1 / 2 / 7/ 6;
+    padding: 1.2em;
+    background-size: 410px 650px;
+    margin-left: -95px;
+    margin-top: 18px;
+  }
+  #add {
+    grid-area: 6/ 1/ 6/ 2;
+  }
+  input {
+    width: 76%;
+    margin-top: 3em;
+  }
+
+  li {
+    margin-left: 2em;
+    line-height: 3em;
+  }
+}
+
+@media screen and (max-width: 1048) {
+  #form {
+    background-size: 504px 650px;
+  }
+}
